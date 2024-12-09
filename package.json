@@ -4,9 +4,12 @@
   "description": "Este proyecto implementa un chatbot que puede procesar mensajes de audio en guaraní, utilizando Google Cloud Functions y el modelo Whisper para transcripción. El chatbot analiza las transcripciones y ejecuta acciones específicas basadas en el contenido del audio.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
