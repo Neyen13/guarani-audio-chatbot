@@ -1,6 +1,24 @@
 const whisper = require('@openai/whisper');
 const fs = require('fs');
 
+// Importa Express.js
+const express = require('express');
+const app = express();
+
+// Define el puerto desde la variable de entorno PORT o usa 8080 por defecto
+const PORT = process.env.PORT || 8080;
+
+// Configura una ruta básica para verificar que el servidor funcione
+app.get('/', (req, res) => {
+  res.send('Servidor funcionando correctamente');
+});
+
+// Haz que el servidor escuche en el puerto definido
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+
+
 exports.processAudio = async (req, res) => {
     try {
         // Simula recepción del archivo (ajustar para tu caso real)
